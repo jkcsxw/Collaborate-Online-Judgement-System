@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { HttpModule } from '@angular/http';
 
 import { routing } from "./app.routes";
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [{
     provide: "data",

@@ -1,5 +1,9 @@
+# secret infomation
+/oj-server/constant.js
+
+
 # dependencies
-/oj-server/node_modules
+node_modules
 
 IDEs and editors
 /.idea
@@ -29,3 +33,9 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#output
+/public
+dist
+tmp
+out-tsc
