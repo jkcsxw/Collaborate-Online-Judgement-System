@@ -6,7 +6,12 @@
  
  oj-server is a node.js Express backend
  
- database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at server.js in oj-server folder.
+ database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at 12-14 line of server.js in oj-server folder.
+ 
+ ```
+ // connect database
+mongoose.connect(yourlink);
+ ```
  
  There are three step to run the project.
  
