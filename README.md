@@ -36,9 +36,11 @@ then you can open http://localhost:3000/  to see the online judgement website.
 
 And the api urls are:
 
-GET
-/api/v1/problems    return all the problems
-POST
-/api/v1/problems    add a new problem
-GET
+GET  
+/api/v1/problems    return all the problems  
+
+POST  
+/api/v1/problems    add a new problem  
+
+GET  
 /api/v1/problems/:id get the problem detail with id
