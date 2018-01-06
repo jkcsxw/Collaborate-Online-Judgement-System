@@ -43,7 +43,7 @@ export class DataService {
       }).catch(this.handleError);
   }
 
-  // error hanlder
+  // error handler
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only
     return Promise.reject(error.body || error);
