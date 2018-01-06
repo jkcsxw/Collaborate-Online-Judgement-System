@@ -13,7 +13,7 @@ export class DataService {
   constructor(private http: Http) { }
 
   getProblems(): Observable<Problem[]> {
-    this.http.get("api/v1/problems")
+    this.http.get("/api/v1/problems")
       .toPromise()
       .then((res: Response) => {
         this.problemsSource.next(res.json());
@@ -24,7 +24,7 @@ export class DataService {
   }
 
   getProblem(id: number): Promise<Problem> {
-    return this.http.get("api/v1/problems/${id}")
+    return this.http.get(`api/v1/problems/${id}`)
                     .toPromise()
                     .then((res:Response) => res.json())
                     .catch(this.handleError);
@@ -35,7 +35,7 @@ export class DataService {
       headers: new Headers({ 'Content-Type': 'application/json' })
     };
 
-    return this.http.post("api/v1/problems", problem, httpOptions)
+    return this.http.post("/api/v1/problems", problem, httpOptions)
       .toPromise()
       .then((res:Response) => {
         this.getProblems();

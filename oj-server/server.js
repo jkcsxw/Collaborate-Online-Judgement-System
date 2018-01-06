@@ -9,10 +9,15 @@ var mongoose = require("mongoose");
 var constant = require("./constant");
 var path = require("path");
 
+// connect database
 mongoose.connect(constant[0].MONGODB_LINK);
 
 app.use(express.static(path.join(__dirname,"../public")));
 app.use("/",indexRouter);
 app.use("/api/v1", restRouter);
+
+app.use(function(req,res){
+    res.sendFile("index.html", {root:path.join(__dirname, "../public/")});
+});
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
