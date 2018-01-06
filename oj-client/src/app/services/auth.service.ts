@@ -16,6 +16,7 @@ export class AuthService {
 
   constructor(public router: Router) {}
 
+
   public login(): void {
     this.auth0.authorize();
   }
@@ -75,4 +76,23 @@ export class AuthService {
     });
   }
 
+
+  public resetPassword() {
+    var webAuth = new auth0.WebAuth({
+      domain:       'kkzero.auth0.com',
+      clientID:     'WSDDAcSNhDrSrwXBEe3uIVj8HTkovjPt'
+    });
+
+    webAuth.changePassword({
+      connection: 'CONNECTION',
+      email:   this.userProfile.name
+    }, function (err, resp) {
+      if(err){
+        console.log(err.message);
+      }else{
+        console.log(resp);
+      }
+    });
+
+  }
 }
