@@ -17,6 +17,7 @@ export class NewProblemComponent implements OnInit {
 
   public difficulties = ["Easy","Medium","Hard","Super"];
 
+  //noinspection TypeScriptUnresolvedFunction
   newProblem:Problem = Object.assign({}, DEFAULT_PROBLEM);
   constructor(@Inject("data") private data) { }
 
@@ -26,6 +27,7 @@ export class NewProblemComponent implements OnInit {
   addProblem(): void{
     this.data.addProblem(this.newProblem)
       .catch(error => alert(error._body));
+    //noinspection TypeScriptUnresolvedFunction
     this.newProblem = Object.assign({},DEFAULT_PROBLEM);
   }
 }

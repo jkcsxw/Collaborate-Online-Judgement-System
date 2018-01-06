@@ -8,5 +8,6 @@ if (environment.production) {
   enableProdMode();
 }
 
+//noinspection TypeScriptUnresolvedFunction
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

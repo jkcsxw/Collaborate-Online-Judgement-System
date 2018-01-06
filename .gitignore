@@ -1,6 +1,6 @@
 # secret infomation
 /oj-server/constant.js
-
+/oj-client/constant.ts
 
 # dependencies
 node_modules
