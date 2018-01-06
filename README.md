@@ -33,8 +33,12 @@ if you use nodemon you can also use nodemon to start the project.
 then you can open http://localhost:3000/  to see the online judgement website.
 
 
+For frontend, there are:  
 
-And the APIs are:  
+data service :  getting and posting problem information
+auth service :  token auth 
+
+And the backend APIs are:  
 GET  
 /api/v1/problems    return all the problems  
 
