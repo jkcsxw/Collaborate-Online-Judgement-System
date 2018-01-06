@@ -1,6 +1,6 @@
 # Collaborate-Online-Judgement-System
 
- Final view can be seen in the preview.jpeg
+ Final view can be seen in the preview.jpeg https://github.com/xkzero/Collaborate-Online-Judgement-System/blob/master/preview.jpeg
  
  oj-client is an Angular frontend
  
