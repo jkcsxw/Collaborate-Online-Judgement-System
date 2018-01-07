@@ -37,9 +37,11 @@ export class AuthService {
   private setSession(authResult): void {
     // Set the time that the access token will expire at
     const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
+    const scopes = authResult.scope || AUTH_CONFIG[0].scope || '';
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
+    localStorage.setItem('scopes', JSON.stringify(scopes));
   }
 
   public logout(): void {
@@ -76,8 +78,9 @@ export class AuthService {
     });
   }
 
-
+  //TODO some problem requesting reset password
   public resetPassword() {
+    //noinspection TypeScriptUnresolvedFunction
     var webAuth = new auth0.WebAuth({
       domain:       'kkzero.auth0.com',
       clientID:     'WSDDAcSNhDrSrwXBEe3uIVj8HTkovjPt'
@@ -93,6 +96,10 @@ export class AuthService {
         console.log(resp);
       }
     });
+  }
 
+  public userHasScopes(scopes: Array<string>): boolean {
+    const grantedScopes = JSON.parse(localStorage.getItem('scopes')).split(' ');
+    return scopes.every(scope => grantedScopes.includes(scope));
   }
 }

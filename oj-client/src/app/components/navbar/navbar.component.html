@@ -22,10 +22,10 @@
         <ul class="nav navbar-nav navbar-right">
           <li>
             <form class="navbar-form">
-              <button type = "button" class="btn btn-primary" (click) = "login()">Sign in</button>
+              <button type = "button" class="btn btn-primary" *ngIf="!auth.isAuthenticated()" (click) = "login()">Sign in</button>
             </form>
           </li>
-          <li class="dropdown">
+          <li class="dropdown" *ngIf="auth.isAuthenticated()">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ nickname }}<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a routerLink = "profile">My Profile</a></li>

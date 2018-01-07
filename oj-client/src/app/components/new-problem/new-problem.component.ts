@@ -16,18 +16,22 @@ const DEFAULT_PROBLEM:Problem = Object.freeze({
 export class NewProblemComponent implements OnInit {
 
   public difficulties = ["Easy","Medium","Hard","Super"];
+  isAdmin=false;
 
+  //TODO need to implement only admin can add problem
   //noinspection TypeScriptUnresolvedFunction
   newProblem:Problem = Object.assign({}, DEFAULT_PROBLEM);
-  constructor(@Inject("data") private data) { }
+  constructor(@Inject("data") private data) {
+
+  }
 
   ngOnInit() {
   }
 
-  addProblem(): void{
+  addProblem(): void {
     this.data.addProblem(this.newProblem)
       .catch(error => alert(error._body));
     //noinspection TypeScriptUnresolvedFunction
-    this.newProblem = Object.assign({},DEFAULT_PROBLEM);
+    this.newProblem = Object.assign({}, DEFAULT_PROBLEM);
   }
 }

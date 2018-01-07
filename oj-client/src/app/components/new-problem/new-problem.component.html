@@ -1,5 +1,5 @@
-<div class ="container">
-  <form #formRef = "ngForm">
+<!--<div *ngIf="auth.isAuthenticated() && auth.userHasScopes(['add:newProblem'])">-->
+<form #formRef = "ngForm">
     <div class="form-group">
       <label for="problemName">Problem Name</label>
       <input type = "text" class = "form-control" id = "problemName" name = "problemName" required placeholder="Enter Problem Name" [(ngModel)]="newProblem.name">
@@ -19,10 +19,11 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <button type = "submit" class="btn btn-primary pull-right" (click)="addProblem()">
+        <button type = "submit" class="btn btn-primary pull-right">
           Add Problem
         </button>
       </div>
     </div>
   </form>
-</div>
+  <br>
+<!--</div>-->
