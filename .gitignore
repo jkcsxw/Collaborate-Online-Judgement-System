@@ -13,6 +13,7 @@ IDEs and editors
 *.launch
 .settings/
 *.sublime-workspace
+/previews
 
 # IDE - VSCode
 .vscode/*
