@@ -27,6 +27,16 @@ if you use nodemon you can also use nodemon to start the project.
 
 then you can open http://localhost:3000/  to see the online judgement website.
 
+### Default Page For Admin  
+![Preview](./previews/Logged-In.png)
+### Default Page Without Logged In  
+![Preview](./previews/New-User.png)  
+### Edit Page    
+![Preview](./previews/editer-preview.png)    
+### Profile Page  
+![Preview](./previews/UserProfilePage.jpeg)  
+
+### Apis  
 
 For frontend, there are:  
 
