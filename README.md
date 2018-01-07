@@ -32,7 +32,7 @@ then you can open http://localhost:3000/  to see the online judgement website.
 ### Default Page Without Logged In  
 ![Preview](./previews/New-User.png)  
 ### Edit Page    
-![Preview](./previews/editer-preview.png)    
+![Preview](./previews/editor-preview.png)    
 ### Profile Page  
 ![Preview](./previews/UserProfilePage.jpeg)  
 
