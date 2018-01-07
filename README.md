@@ -1,14 +1,5 @@
 # Collaborate-Online-Judgement-System
 
-### Default Page For Admin  
-![Preview](./previews/Logged-In.png)
-### Default Page Without Logged In  
-![Preview](./previews/New-User.png)  
-### Edit Page    
-![Preview](./previews/editer-preview.png)    
-### Profile Page  
-![Preview](./previews/UserProfilePage.jpeg)  
-
 ### Step to start the web application  
 
 You can simply run  
