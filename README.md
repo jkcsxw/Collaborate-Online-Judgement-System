@@ -1,26 +1,23 @@
 # Collaborate-Online-Judgement-System
 
-![Preview](./previews/preview.jpeg)
-![Preview](./previews/editer-preview.png)
+### Default Page For Admin  
 ![Preview](./previews/Logged-In.png)
-![Preview](./previews/New-User.png)
-![Preview](./previews/UserProfilePage.jpeg)
+### Default Page Without Logged In  
+![Preview](./previews/New-User.png)  
+### Edit Page    
+![Preview](./previews/editer-preview.png)    
+### Profile Page  
+![Preview](./previews/UserProfilePage.jpeg)  
 
- 
- oj-client is an Angular frontend
- 
- oj-server is a node.js Express backend
- 
- database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at 12-14 line of server.js in oj-server folder.
- 
- I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information.
- 
- ```
- // connect database
-mongoose.connect(yourlink);
- ```
- 
- There are three step to run the project.
+### Step to start the web application  
+
+You can simply run  
+```
+sh launch.sh
+```
+or   
+
+There are three step to run the project.
  
 1. under cd {you_dir}/oj   
 ```
@@ -54,3 +51,18 @@ POST
 
 GET  
 /api/v1/problems/:id get the problem detail with id
+
+### More Infos
+ 
+ oj-client is an Angular frontend
+ 
+ oj-server is a node.js Express backend
+ 
+ database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at 12-14 line of server.js in oj-server folder.
+ 
+ I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information.
+ 
+ ```
+ // connect database
+mongoose.connect(yourlink);
+ ```
