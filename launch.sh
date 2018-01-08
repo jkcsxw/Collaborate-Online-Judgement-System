@@ -1,7 +1,7 @@
 # npm install -g nodemon
 cd ./oj-client
-npm install
+# npm install
 ng build --watch &
 cd ../oj-server
-npm install
+# npm install
 nodemon server.js
