@@ -57,11 +57,11 @@ export class CollaborationService {
     this.collaborationSocket.emit("change", delta);
   }
 
-  // cursorMove(cursor: string): void {
-  //   this.collaborationSocket.emit("cursorMove", cursor);
-  // }
+  cursorMove(cursor: string): void {
+    this.collaborationSocket.emit("cursorMove", cursor);
+  }
 
-  // restoreBuffer(): void {
-  //   this.collaborationSocket.emit("restoreBuffer");
-  // }
+  restoreBuffer(): void {
+    this.collaborationSocket.emit("restoreBuffer");
+  }
 }
