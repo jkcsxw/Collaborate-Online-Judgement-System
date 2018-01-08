@@ -32,6 +32,11 @@
         </div>
       </div>
     </div>
+    <select class="form-control pull-right theme-select" name="theme" [(ngModel)]="theme" (change)="setTheme(theme)">
+      <option *ngFor="let theme of themes" [value]="theme">
+        {{theme}}
+      </option>
+    </select>
   </header>
 
   <div class="row">

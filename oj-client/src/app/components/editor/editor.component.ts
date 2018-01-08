@@ -14,6 +14,8 @@ export class EditorComponent implements OnInit {
   editor: any;
 
   public languages: string[] = ['Java', 'C++', 'Python'];
+  public themes: string[] = ['monokai','eclipse'];
+  theme:string = 'monokai'
   language: string = 'Java';
 
   sessionId: string;
@@ -21,7 +23,7 @@ export class EditorComponent implements OnInit {
   defaultContent = {
     'Java': `public class Solution {
     public static void main(String[] args) {
-      // Type your code here
+      // Type your Java code here
     }
 }`,
     'C++': `#include <iostream>
@@ -49,7 +51,7 @@ int main() {
 
   initEditor() {
     this.editor = ace.edit('editor');
-    this.editor.setTheme('ace/theme/eclipse');
+    this.editor.setTheme('ace/theme/'+this.theme.toLocaleLowerCase());
     this.resetEditor();
     this.editor.$blockScrolling = Infinity;
 
@@ -59,11 +61,11 @@ int main() {
     this.editor.lastAppliedChange = null;
 
     this.editor.on('change', (e) => {
-      console.log('editor changes: ' + JSON.stringify(e));
+      // console.log('editor changes: ' + JSON.stringify(e));
 
       if (this.editor.lastAppliedChange != e) {
         this.collaboration.change(JSON.stringify(e));
-        console.log('lastApplliedChange: ' + JSON.stringify(this.editor.lastAppliedChange));
+        // console.log('lastApplliedChange: ' + JSON.stringify(this.editor.lastAppliedChange));
       }
     });
   }
@@ -73,14 +75,21 @@ int main() {
     this.resetEditor();
   }
 
+  setTheme(theme: string): void{
+    this.theme = theme;
+    this.editor.setTheme('ace/theme/'+this.theme.toLocaleLowerCase());
+  }
+
   resetEditor(): void {
     this.editor.getSession().setMode('ace/mode/' + this.language.toLocaleLowerCase());
     this.editor.setValue(this.defaultContent[this.language]);
+    // this.editor.setTheme('ace/theme/'+this.theme.toLocaleLowerCase());
+
   }
 
   submit(): void {
     let userCode = this.editor.getValue();
-    console.log(userCode);
+    // console.log(userCode);
   }
 
 }
