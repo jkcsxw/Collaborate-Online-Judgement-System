@@ -42,7 +42,7 @@ For frontend, there are:
 
 data service :  getting and posting problem information  
 auth service :  token auth ,user function
-collaboration server: collaboratively store editor content to server  
+collaboration server: collaboratively store editor content to server using socket.io   
 
 And the backend APIs are:  
 GET  
