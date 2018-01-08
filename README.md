@@ -41,7 +41,8 @@ then you can open http://localhost:3000/  to see the online judgement website.
 For frontend, there are:  
 
 data service :  getting and posting problem information  
-auth service :  token auth 
+auth service :  token auth ,user function
+collaboration server: collaboratively store editor content to server  
 
 And the backend APIs are:  
 GET  
