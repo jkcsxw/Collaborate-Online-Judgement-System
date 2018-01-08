@@ -33,10 +33,11 @@ then you can open http://localhost:3000/  to see the online judgement website.
 ![Preview](./previews/New-User.png)  
 ### 3. Editor   
 ![Preview](./previews/editor-preview.png)    
-### 4. Profile  
+### 4. Collaborative Editting   
+![Preview](./previews/Collaborative.png)    
+### 5. Profile  
 ![Preview](./previews/UserProfilePage.jpeg)  
-### 5. Collaborative Editting
-![Preview](./previews/Collaborative.png)  
+ 
 
 ### Apis  
 
