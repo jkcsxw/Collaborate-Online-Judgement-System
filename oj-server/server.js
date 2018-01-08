@@ -12,7 +12,7 @@ var http = require('http');
 
 var socket_io = require('socket.io');
 var io = socket_io();
-var SocketService = require('./services/SocketService.js')(io);
+var SocketService = require('./services/socketService.js')(io);
 
 // connect database
 mongoose.connect(constant[0].MONGODB_LINK);
