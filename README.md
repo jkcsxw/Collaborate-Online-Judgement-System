@@ -32,7 +32,7 @@ then you can open http://localhost:3000/  to see the online judgement website.
 ### Default Page Without Logged In  
 ![Preview](./previews/New-User.png)  
 ### Edit Page    
-![Preview](./previews/editer-preview.png)    
+![Preview](./previews/editor-preview.png)    
 ### Profile Page  
 ![Preview](./previews/UserProfilePage.jpeg)  
 
@@ -41,7 +41,8 @@ then you can open http://localhost:3000/  to see the online judgement website.
 For frontend, there are:  
 
 data service :  getting and posting problem information  
-auth service :  token auth 
+auth service :  token auth ,user function
+collaboration server: collaboratively store editor content to server using socket.io   
 
 And the backend APIs are:  
 GET  
@@ -59,9 +60,10 @@ GET
  
  oj-server is a node.js Express backend
  
- database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at 12-14 line of server.js in oj-server folder.
+## Important!  
+#### ***database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself,you need to change the url of database at 12-14 line of server.js in oj-server folder.***
  
- I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information.
+#### ***I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information.***
  
  ```
  // connect database
