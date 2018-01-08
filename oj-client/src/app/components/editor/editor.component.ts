@@ -20,6 +20,8 @@ export class EditorComponent implements OnInit {
 
   sessionId: string;
 
+  output = "";
+
   defaultContent = {
     'Java': `public class Solution {
     public static void main(String[] args) {
@@ -38,7 +40,9 @@ int main() {
       # Write your Python code here`
   };
 
-  constructor(@Inject('collaboration') private collaboration, private route: ActivatedRoute) {
+  constructor(@Inject('collaboration') private collaboration,
+              @Inject('data') private data,
+              private route: ActivatedRoute) {
 
   }
 
@@ -82,14 +86,20 @@ int main() {
 
   resetEditor(): void {
     this.editor.getSession().setMode('ace/mode/' + this.language.toLocaleLowerCase());
-    this.editor.setValue(this.defaultContent[this.language]);
+    this.editor.setValue(this.defaultContent[this.language])
+    this.output = "";
     // this.editor.setTheme('ace/theme/'+this.theme.toLocaleLowerCase());
 
   }
 
   submit(): void {
     let userCode = this.editor.getValue();
-    // console.log(userCode);
+    let editorData = {
+      user_code: userCode,
+      lang: this.language.toLowerCase()
+    };
+    this.data.buildAndRun(editorData)
+      .then( res => this.output = res.text);
   }
 
 }

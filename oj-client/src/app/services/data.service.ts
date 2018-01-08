@@ -43,6 +43,19 @@ export class DataService {
       }).catch(this.handleError);
   }
 
+  buildAndRun(editorData): Promise<Object> {
+    const httpOptions = {
+      headers: new Headers({ 'Content-Type': 'application/json' })
+    };
+
+    return this.http.post("/api/v1/build_and_run", editorData, httpOptions)
+      .toPromise()
+      .then((res:Response) => {
+        console.log(res);
+        return res.json();
+      }).catch(this.handleError);
+  }
+
   // error handler
   private handleError(error: any): Promise<any> {
     console.error('An error occurred', error); // for demo purposes only

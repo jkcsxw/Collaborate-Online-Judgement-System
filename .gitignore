@@ -35,6 +35,7 @@ testem.log
 Thumbs.db
 
 #output
+*.pyc
 /public
 dist
 tmp

@@ -1,26 +1,26 @@
 <section>
   <header class="editor-header">
-    <select class="form-control pull-left lang-select" name="language" [(ngModel)]="language" (change)="setLanguage(language)">
+    <select class="form-control pull-left lang-select" id="language" name="language" [(ngModel)]="language" (change)="setLanguage(language)">
       <option *ngFor="let language of languages" [value]="language">
         {{language}}
       </option>
     </select>
 
+    <!-- reset button -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#exampleModal">
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal">
       <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Reset</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
+            <h4 class="modal-title" id="myModalLabel">Reset</h4>
           </div>
           <div class="modal-body">
             You will lose current code in the window, are you sure?
@@ -32,15 +32,13 @@
         </div>
       </div>
     </div>
-    <select class="form-control pull-right theme-select" name="theme" [(ngModel)]="theme" (change)="setTheme(theme)">
-      <option *ngFor="let theme of themes" [value]="theme">
-        {{theme}}
-      </option>
-    </select>
   </header>
-
   <div class="row">
     <div id="editor"></div>
+  </div>
+
+  <div>
+    {{output}}
   </div>
 
   <footer class="editor-footer">
