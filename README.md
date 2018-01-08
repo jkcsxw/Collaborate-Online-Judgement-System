@@ -60,9 +60,9 @@ GET
  
  oj-server is a node.js Express backend
  
- '''database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself, you need to change the url of database at 12-14 line of server.js in oj-server folder.'''
+ """database is mongodb, for privacy, I have hided the information of the database, in order to run the project yourself,you need to change the url of database at 12-14 line of server.js in oj-server folder."""
  
- '''I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information.'''
+"""I also used auth0 to do user authorilariztion in auth.service in oj-client, the key information is also hidden, in order to use the user auth function, you may need to go to https://auth0.com to get your own information."""
  
  ```
  // connect database
