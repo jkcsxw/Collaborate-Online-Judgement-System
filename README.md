@@ -1,6 +1,6 @@
 # Collaborate-Online-Judgement-System
 
-### Step to start the web application  
+## Step to start the web application  
 
 You can simply run  
 ```
@@ -27,14 +27,16 @@ if you use nodemon you can also use nodemon to start the project.
 
 then you can open http://localhost:3000/  to see the online judgement website.
 
-### Default Page For Admin  
+### 1. Admin  
 ![Preview](./previews/Logged-In.png)
-### Default Page Without Logged In  
+### 2. Without Logged In  
 ![Preview](./previews/New-User.png)  
-### Edit Page    
+### 3. Editor   
 ![Preview](./previews/editor-preview.png)    
-### Profile Page  
+### 4. Profile  
 ![Preview](./previews/UserProfilePage.jpeg)  
+### 5. Collaborative Editting
+![Preview](./previews/Collaborative.png)  
 
 ### Apis  
 
