@@ -20,6 +20,8 @@ export class EditorComponent implements OnInit {
 
   sessionId: string;
 
+  output:string;
+
   defaultContent = {
     'Java': `public class Solution {
     public static void main(String[] args) {
@@ -68,6 +70,14 @@ int main() {
         // console.log('lastApplliedChange: ' + JSON.stringify(this.editor.lastAppliedChange));
       }
     });
+
+    this.editor.getSession().getSelection().on("changeCursor", () => {
+      let cursor = this.editor.getSession().getSelection().getCursor();
+      console.log('cursor moves: ' + JSON.stringify(cursor));
+      this.collaboration.cursorMove(JSON.stringify(cursor));
+    });
+
+    this.collaboration.restoreBuffer();
   }
 
   setLanguage(language: string): void {
@@ -83,6 +93,7 @@ int main() {
   resetEditor(): void {
     this.editor.getSession().setMode('ace/mode/' + this.language.toLocaleLowerCase());
     this.editor.setValue(this.defaultContent[this.language]);
+    this.output = 'abc';
     // this.editor.setTheme('ace/theme/'+this.theme.toLocaleLowerCase());
 
   }
