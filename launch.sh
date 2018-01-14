@@ -1,7 +1,7 @@
 #!/bin/bash
 fuser -k 3000/tcp
 
-service redis_6379 start
+redis-server
 cd ./oj-server
 npm install
 nodemon server.js &&
@@ -13,4 +13,5 @@ echo "=================================================="
 read -p "PRESS [ENTER] TO TERMINATE PROCESSES." PRESSKEY
 
 fuser -k 3000/tcp
-service redis_6379 stop
+
+redis-cli shutdown
